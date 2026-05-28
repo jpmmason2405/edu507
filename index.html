@@ -1209,15 +1209,14 @@ button { font: inherit; cursor: pointer; }
 /* SIOP design activity slide — scenario card + 8-component grid */
 .slide--design .slide__inner {
   padding: var(--space-56) var(--space-56) var(--space-32);
+  display: block;
+  overflow: hidden;
+}
+.design-fit {
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
-  overflow-y: auto;
-}
-.slide--design .slide__inner::-webkit-scrollbar { width: 6px; }
-.slide--design .slide__inner::-webkit-scrollbar-thumb {
-  background: var(--rule);
-  border-radius: 3px;
+  transform-origin: top center;
 }
 .design-header {
   display: grid;
@@ -3122,6 +3121,7 @@ button { font: inherit; cursor: pointer; }
     <span class="top-bar__counter">43 / 56</span>
   </div>
   <div class="slide__inner">
+    <div class="design-fit">
     <header class="design-header">
       <div class="design-header__intro">
         <div class="eyebrow">In class activity · 1 hour · pairs</div>
@@ -3234,6 +3234,7 @@ button { font: inherit; cursor: pointer; }
         <p class="design-cell__example">Listen to a 30 second teacher recap · speak the three vocabulary words to a partner with gestures · read a one sentence summary on the board · write <em>Today I learned that ___ and one question I still have is ___.</em></p>
         <p class="design-cell__task">Design a four domain exit ticket. One specific move per domain. Include the exact sentence frame students will complete in the writing piece.</p>
       </article>
+    </div>
     </div>
   </div>
   <div class="deck-credit">Built with <strong>Anyra</strong></div>
